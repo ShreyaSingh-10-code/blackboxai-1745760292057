@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dream Guardian - Achieve Your Dreams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 min-h-screen flex flex-col">
+  <header class="bg-white bg-opacity-80 backdrop-blur-md shadow-md sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-indigo-700 flex items-center">
+        <i class="fas fa-shield-alt mr-2 text-indigo-500"></i> Dream Guardian
+      </h1>
+      <nav>
+        <ul class="flex space-x-6 text-indigo-600 font-medium">
+          <li><a href="#goals" class="hover:text-indigo-800 transition">Set Goals</a></li>
+          <li><a href="#guidance" class="hover:text-indigo-800 transition">Guidance</a></li>
+          <li><a href="#about" class="hover:text-indigo-800 transition">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-10">
+    <section class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold text-indigo-700 mb-4">Achieve Your Dreams with Your Personal Guardian</h2>
+      <p class="text-lg text-indigo-600 max-w-xl mx-auto">Set your goals, track your progress, and receive motivational guidance to help you succeed.</p>
+    </section>
+
+    <section id="goals" class="mb-16 bg-white bg-opacity-80 rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-6">Set Your Goals</h3>
+      <form id="goalForm" class="space-y-4">
+        <div>
+          <label for="goalInput" class="block text-indigo-600 font-medium mb-2">What is your dream or goal?</label>
+          <input type="text" id="goalInput" name="goalInput" placeholder="Enter your dream or goal" required
+            class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition">Add Goal</button>
+      </form>
+      <div id="goalsList" class="mt-6 space-y-3 text-indigo-700 font-medium"></div>
+      <div id="educationSuggestion" class="mt-6 p-4 bg-indigo-50 rounded-md text-indigo-800 font-semibold"></div>
+    </section>
+
+    <section id="guidance" class="mb-16 bg-white bg-opacity-80 rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-6">Motivational Guidance</h3>
+      <ul class="list-disc list-inside space-y-3 text-indigo-600" id="guidanceList">
+        <li>Believe in yourself and your dreams.</li>
+        <li>Break your goals into small, achievable steps.</li>
+        <li>Stay consistent and track your progress regularly.</li>
+        <li>Learn from setbacks and keep moving forward.</li>
+        <li>Celebrate your achievements, no matter how small.</li>
+      </ul>
+    </section>
+
+    <section id="about" class="text-center text-indigo-700">
+      <h3 class="text-2xl font-semibold mb-4">About Dream Guardian</h3>
+      <p class="max-w-xl mx-auto">Dream Guardian is your personal app to help you set, track, and achieve your dreams with motivational guidance and support, just like a real guardian.</p>
+    </section>
+  </main>
+
+  <footer class="bg-indigo-700 text-white text-center py-4 mt-auto">
+    &copy; 2024 Dream Guardian. All rights reserved.
+  </footer>
+
+  <script>
+    const goalForm = document.getElementById('goalForm');
+    const goalsList = document.getElementById('goalsList');
+    const educationSuggestion = document.getElementById('educationSuggestion');
+
+    const dreamToEducationMap = {
+      doctor: 'Medicine, Healthcare',
+      'ias officer': 'Public Administration, Political Science, Law',
+      engineer: 'Engineering (various branches)',
+      scientist: 'Science (Physics, Chemistry, Biology, etc.)',
+      developer: 'Computer Science, Software Engineering'
+    };
+
+    goalForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const goalInput = document.getElementById('goalInput');
+      const goalText = goalInput.value.trim();
+      if (goalText) {
+        const goalItem = document.createElement('div');
+        goalItem.textContent = goalText;
+        goalItem.className = 'bg-indigo-100 rounded-md p-3 shadow-sm';
+        goalsList.appendChild(goalItem);
+
+        // Suggest education field based on dream
+        const dreamKey = goalText.toLowerCase();
+        if (dreamToEducationMap[dreamKey]) {
+          educationSuggestion.textContent = `To achieve your dream of becoming a ${goalText}, consider studying: ${dreamToEducationMap[dreamKey]}.`;
+        } else {
+          educationSuggestion.textContent = 'Sorry, no specific educational guidance available for this dream yet.';
+        }
+
+        goalInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
