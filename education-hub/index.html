@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Learning Hub - Your Path to Knowledge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 min-h-screen flex flex-col">
+  <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-3xl font-bold text-indigo-700 flex items-center">
+        <i class="fas fa-graduation-cap mr-3 text-indigo-500"></i> Interactive Learning Hub
+      </h1>
+      <nav>
+        <ul class="flex space-x-8 text-indigo-600 font-semibold">
+          <li><a href="#paths" class="hover:text-indigo-800 transition">Learning Paths</a></li>
+          <li><a href="#resources" class="hover:text-indigo-800 transition">Resources</a></li>
+          <li><a href="#tips" class="hover:text-indigo-800 transition">Study Tips</a></li>
+          <li><a href="#contact" class="hover:text-indigo-800 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-12">
+    <section class="text-center mb-20">
+      <h2 class="text-5xl font-extrabold text-indigo-700 mb-6">Your Path to Knowledge Starts Here</h2>
+      <p class="text-xl text-indigo-600 max-w-3xl mx-auto">Explore curated learning paths, access top resources, and get expert study tips to excel in your educational journey.</p>
+      <a href="#paths" class="inline-block mt-8 bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition">Explore Learning Paths</a>
+    </section>
+
+    <section id="paths" class="mb-20">
+      <h3 class="text-3xl font-bold text-indigo-700 mb-8 text-center">Curated Learning Paths</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <i class="fas fa-laptop-code text-indigo-500 text-5xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-2">Computer Science</h4>
+          <p class="text-indigo-600">Learn programming, algorithms, data structures, and software development to become a skilled developer.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <i class="fas fa-flask text-indigo-500 text-5xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-2">Science & Research</h4>
+          <p class="text-indigo-600">Dive into physics, chemistry, biology, and scientific methods to pursue a career in research and innovation.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <i class="fas fa-balance-scale text-indigo-500 text-5xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-2">Law & Public Policy</h4>
+          <p class="text-indigo-600">Understand legal systems, governance, and public policy to prepare for roles in law, administration, and leadership.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="mb-20">
+      <h3 class="text-3xl font-bold text-indigo-700 mb-8 text-center">Top Educational Resources</h3>
+      <ul class="list-disc list-inside max-w-3xl mx-auto text-indigo-600 space-y-3">
+        <li><a href="https://www.khanacademy.org" target="_blank" class="text-indigo-700 hover:underline">Khan Academy</a> - Free online courses on a wide range of subjects.</li>
+        <li><a href="https://www.coursera.org" target="_blank" class="text-indigo-700 hover:underline">Coursera</a> - Online courses from top universities and companies.</li>
+        <li><a href="https://www.edx.org" target="_blank" class="text-indigo-700 hover:underline">edX</a> - Access to university-level courses and certifications.</li>
+        <li><a href="https://www.codecademy.com" target="_blank" class="text-indigo-700 hover:underline">Codecademy</a> - Interactive coding lessons for beginners and advanced learners.</li>
+      </ul>
+    </section>
+
+    <section id="tips" class="mb-20 bg-white bg-opacity-90 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-indigo-700 mb-6 text-center">Effective Study Tips</h3>
+      <ol class="list-decimal list-inside text-indigo-600 space-y-4">
+        <li>Set clear, achievable goals for each study session.</li>
+        <li>Use active learning techniques like summarizing and questioning.</li>
+        <li>Take regular breaks to maintain focus and avoid burnout.</li>
+        <li>Practice past papers and quizzes to test your understanding.</li>
+        <li>Stay organized with a study schedule and prioritize tasks.</li>
+      </ol>
+    </section>
+
+    <section id="contact" class="text-center text-indigo-700">
+      <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
+      <p class="max-w-xl mx-auto mb-6">Have questions or want to suggest new learning paths? Reach out to us!</p>
+      <a href="mailto:contact@learninghub.com" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Email Us</a>
+    </section>
+  </main>
+
+  <footer class="bg-indigo-700 text-white text-center py-6 mt-auto">
+    &copy; 2024 Interactive Learning Hub. All rights reserved.
+  </footer>
+</body>
+</html>
